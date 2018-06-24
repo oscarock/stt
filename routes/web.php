@@ -22,7 +22,3 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/load_deparments', 'Auth\RegisterController@load_deparments');
 Route::get('/load_towns/{id_deparment}', 'Auth\RegisterController@load_towns');
 
-Route::get('/prueba',function(){
-	$towns = App\Town::where('department_id', '=', 11)->get();
-	var_dump($towns);
-});

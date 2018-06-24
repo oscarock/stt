@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->integer('salary');
             $table->string('email')->unique();
             $table->string('department');
-            $table->string('city');
+            $table->string('town');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
