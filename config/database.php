@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -41,11 +41,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'jsftj8ez0cevjz8v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
+            'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'q45mhq4r95umlcb3'),
-            'username' => env('DB_USERNAME', 'x4j9obpieb4kaj2e'),
-            'password' => env('DB_PASSWORD', 'idivzvhfj008s18u'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -54,18 +54,18 @@ return [
             'engine' => null,
         ],
 
-        'pgsql' => [
-            'driver' => 'pgsql',
-            'host' => env('DB_HOST', 'ec2-54-163-229-212.compute-1.amazonaws.com'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'de5uqahk1mig1r'),
-            'username' => env('DB_USERNAME', 'siskogkieeccnr'),
-            'password' => env('DB_PASSWORD', '126f355f5af89700b8a9d18f32638df4c2f43b8c8c5b0fe166204926de6b7d3c'),
-            'charset' => 'utf8',
-            'prefix' => '',
-            'schema' => 'public',
-            'sslmode' => 'prefer',
-        ],
+       'pgsql' => [
+                  'driver' => 'pgsql',
+                  'host' => env('DB_HOST', '127.0.0.1'),
+                  'port' => env('DB_PORT', '5432'),
+                  'database' => env('DB_DATABASE', 'forge'),
+                  'username' => env('DB_USERNAME', 'forge'),
+                  'password' => env('DB_PASSWORD', ''),
+                  'charset' => 'utf8',
+                  'prefix' => '',
+                  'schema' => 'public',
+                  'sslmode' => 'prefer',
+              ],
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
