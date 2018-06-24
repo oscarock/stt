@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Deparment;
+use App\Town;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -80,5 +82,15 @@ class RegisterController extends Controller
             'city' => $data['city'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+    public function load_deparments(){
+        $deparments = Deparment::all();
+        return response()->json([$deparments]);
+    }
+
+    public function load_towns($id_deparment){
+        $towns = Town::where('department_id', '=', $id_deparment)->get();
+        return response()->json([$towns]);
     }
 }

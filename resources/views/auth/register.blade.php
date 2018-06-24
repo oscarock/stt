@@ -103,10 +103,8 @@
                             <label for="department" class="col-md-4 col-form-label text-md-right">{{ __('Departamento') }}</label>
 
                             <div class="col-md-6">
-                                <select name="department" class="form-control{{ $errors->has('department') ? ' is-invalid' : '' }}">
+                                <select name="department" id="department" class="form-control{{ $errors->has('department') ? ' is-invalid' : '' }}">
                                     <option value="">--Seleccionar--</option>
-                                    <option value="single">Soltero</option>
-                                    <option value="married">Casado</option>
                                 </select>
 
                                 @if ($errors->has('department'))
@@ -121,10 +119,8 @@
                             <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('Ciudad') }}</label>
 
                             <div class="col-md-6">
-                                <select name="city" class="form-control{{ $errors->has('city') ? ' is-invalid' : '' }}">
+                                <select name="city" id="city" class="form-control{{ $errors->has('city') ? ' is-invalid' : '' }}">
                                     <option value="">--Seleccionar--</option>
-                                    <option value="single">Soltero</option>
-                                    <option value="married">Casado</option>
                                 </select>
 
                                 @if ($errors->has('city'))
@@ -171,3 +167,7 @@
     </div>
 </div>
 @endsection
+
+@section('scripts')
+    <script src="{{ asset('js/main.js') }}"></script>
+@stop
