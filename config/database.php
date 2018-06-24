@@ -41,11 +41,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'c9cujduvu830eexs.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
+            'host' => env('DB_HOST', 'jsftj8ez0cevjz8v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'p2txnams90a91mxz'),
-            'username' => env('DB_USERNAME', 'ibip2tpei0texb3q'),
-            'password' => env('DB_PASSWORD', 'dm2tocz5ontdgai1'),
+            'database' => env('DB_DATABASE', 'q45mhq4r95umlcb3'),
+            'username' => env('DB_USERNAME', 'x4j9obpieb4kaj2e'),
+            'password' => env('DB_PASSWORD', 'idivzvhfj008s18u'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
