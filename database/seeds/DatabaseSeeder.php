@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'prueba@prueba.com',
             'department' => 'Bogota D.C',
             'town' => 'Bogota D.C',
-            'password' => Hash::make(123456);
+            'password' => Hash::make(123456)
         ]);
     }
 }
