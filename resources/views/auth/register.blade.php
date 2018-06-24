@@ -116,16 +116,16 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('Ciudad') }}</label>
+                            <label for="town" class="col-md-4 col-form-label text-md-right">{{ __('Municipio') }}</label>
 
                             <div class="col-md-6">
-                                <select name="city" id="city" class="form-control{{ $errors->has('city') ? ' is-invalid' : '' }}">
+                                <select name="town" id="town" class="form-control{{ $errors->has('town') ? ' is-invalid' : '' }}">
                                     <option value="">--Seleccionar--</option>
                                 </select>
 
-                                @if ($errors->has('city'))
+                                @if ($errors->has('town'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('city') }}</strong>
+                                        <strong>{{ $errors->first('town') }}</strong>
                                     </span>
                                 @endif
                             </div>

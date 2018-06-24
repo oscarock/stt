@@ -19,7 +19,7 @@ function load_deparments(){
 
 function load_towns(id_deparment){
 	$("#department").on('change', function(){
-		$('#city').empty()
+		$('#town').empty()
 		$.ajax({
 			method: "GET",
 			url: 'load_towns/' + this.value,
@@ -27,7 +27,7 @@ function load_towns(id_deparment){
 		}).done(function(response){
 			response.forEach(function(element) {
 				element.forEach(function(value) {
-					$("#city").append('<option value="'+ value.id +'">'+ value.name +'</option>');
+					$("#town").append('<option value="'+ value.id +'">'+ value.name +'</option>');
 				})
 			})
 		})

@@ -39,7 +39,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        //$this->middleware('guest');
     }
 
     /**
@@ -58,7 +58,7 @@ class RegisterController extends Controller
             'salary' => 'required|numeric',
             'email' => 'required|string|email|max:255|unique:users',
             'department' => 'required|string|max:255',
-            'city' => 'required|string|max:255',
+            'town' => 'required|string|max:255',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -79,7 +79,7 @@ class RegisterController extends Controller
             'salary' => $data['salary'],
             'email' => $data['email'],
             'department' => $data['department'],
-            'city' => $data['city'],
+            'town' => $data['town'],
             'password' => Hash::make($data['password']),
         ]);
     }

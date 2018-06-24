@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use DB;
 
 class HomeController extends Controller
 {
@@ -24,7 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = DB::table('users')
+            ->join('departments', 'users.department', '=', 'departments.id')
+            ->join('towns', 'users.town', '=', 'towns.id')
+            ->select('users.*', 'departments.name as department', 'towns.name as town')
+            ->get();
         return view('home', compact('users'));
     }
 }
